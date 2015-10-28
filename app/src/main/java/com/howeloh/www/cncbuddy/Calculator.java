@@ -3,9 +3,16 @@ package com.howeloh.www.cncbuddy;
 import android.widget.EditText;
 
 /**
+ * This Class is used to create reusability across each of the primary calculator activities
  * Created by Eric on 10/27/2015.
  */
 public class Calculator {
+
+    EditText Dia;
+    EditText SFM;
+    EditText RPM;
+    EditText IPR;
+    EditText IPM;
 
     private String calculateDia_w_SFM_RPM(EditText SFM, EditText RPM){
         return String.format("%.4f", Double.valueOf(SFM.getText().toString()) / (Double.valueOf(RPM.getText().toString()) * (Math.PI / 12d)));
@@ -29,5 +36,9 @@ public class Calculator {
 
     private String calculateIPR_w_RPM_IPM (EditText RPM, EditText IPM){
         return String.format("%.4f", Double.valueOf(IPM.getText().toString()) / Double.valueOf(RPM.getText().toString()));
+    }
+
+    private void diaLostFocus (){
+
     }
 }
