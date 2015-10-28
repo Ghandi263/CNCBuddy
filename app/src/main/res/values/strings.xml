@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">CNC Buddy</string>
+    <string name="drillTitleText">Drilling</string>
+    <string name="drillDiameterText">Diameter (in.)</string>
+    <string name="drillDiameterHint">Diameter of the Drill in Inches</string>
+    <string name="drillSurfaceFootageLabel">Surface Footage (SFM)</string>
+    <string name="drillSurfaceFootageHint">Rotational Speed of Cutting Edges in Surface Feet/Min</string>
+    <string name="drillRotationalSpeedLabel">Rotational Speed (RPM)</string>
+    <string name="drillRotationalSpeedHint">Number of Rotations the Drill Turns Each Minute</string>
+    <string name="drillPerRevLabel">Feed per Revolution (IPR)</string>
+    <string name="drillPerRevHint">Distance the Drill moves per Revolution</string>
+    <string name="drillFeedLabel">Feed (IPM)</string>
+    <string name="drillFeedHint">Distance the Drill Travels Per Minute</string>
+    <string name="clearButtonText">Clear All</string>
+</resources>
