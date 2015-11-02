@@ -1,35 +1,35 @@
 <LinearLayout
-    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/drillTitleText"
         android:id="@+id/drillTitle"
-        android:layout_gravity="center_horizontal" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/drillTitleText"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/drillDiameterText"
-        android:paddingTop="20dp"/>
+        android:paddingTop="20dp"
+        android:text="@string/drillDiameterText" />
 
     <EditText
         android:id="@+id/drillDiameter"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:hint="@string/drillDiameterHint"
-        android:inputType="number|numberDecimal"/>
+        android:inputType="number|numberDecimal" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/drillSurfaceFootageLabel"
-        android:paddingTop="20dp"/>
+        android:paddingTop="20dp"
+        android:text="@string/drillSurfaceFootageLabel" />
 
     <EditText
         android:id="@+id/drillSurfaceFootage"
@@ -41,8 +41,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/drillRotationalSpeedLabel"
-        android:paddingTop="20dp"/>
+        android:paddingTop="20dp"
+        android:text="@string/drillRotationalSpeedLabel" />
 
     <EditText
         android:id="@+id/drillRotationalSpeed"
@@ -54,35 +54,35 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/drillPerRevLabel"
-        android:paddingTop="20dp"/>
+        android:paddingTop="20dp"
+        android:text="@string/drillPerRevLabel" />
 
     <EditText
         android:id="@+id/drillPerRev"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:hint="@string/drillPerRevHint"
-        android:inputType="number|numberDecimal"/>
+        android:inputType="number|numberDecimal" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/drillFeedLabel"
-        android:paddingTop="20dp"/>
+        android:paddingTop="20dp"
+        android:text="@string/drillFeedLabel" />
 
     <EditText
         android:id="@+id/drillFeed"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:hint="@string/drillFeedHint"
-        android:inputType="number|numberDecimal"/>
+        android:inputType="number|numberDecimal" />
 
     <Button
         android:id="@+id/clearButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/clearButtonText"
-        android:gravity="center" />
+        android:gravity="center"
+        android:text="@string/clearButtonText" />
 
 
 </LinearLayout>

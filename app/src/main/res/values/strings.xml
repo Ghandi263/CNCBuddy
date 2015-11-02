@@ -12,4 +12,6 @@
     <string name="drillFeedLabel">Feed (IPM)</string>
     <string name="drillFeedHint">Distance the Drill Travels Per Minute</string>
     <string name="clearButtonText">Clear All</string>
+    <string name="drillBreakThroughHint">Tip of Drill to First Land in Inches</string>
+    <string name="drillBreakThroughLabel">Break Through (in.)</string>
 </resources>
