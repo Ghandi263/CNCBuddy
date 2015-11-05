@@ -1,29 +1,35 @@
-<LinearLayout
+<GridLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="horizontal"
+    android:columnCount="3">
 
     <TextView
         android:id="@+id/drillTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_columnSpan="3"
+        android:gravity="center_horizontal"
         android:text="@string/drillTitleText"
         android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Space
+        android:layout_columnSpan="3"
+        android:layout_height="20dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="20dp"
         android:text="@string/drillDiameterText" />
+
 
     <EditText
         android:id="@+id/drillDiameter"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:hint="@string/drillDiameterHint"
-        android:inputType="number|numberDecimal" />
+        android:inputType="number|numberDecimal"
+        android:layout_columnSpan="3"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -36,7 +42,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:hint="@string/drillSurfaceFootageHint"
-        android:inputType="number|numberDecimal" />
+        android:inputType="number|numberDecimal"
+        android:layout_columnSpan="3" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -49,7 +56,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:hint="@string/drillRotationalSpeedHint"
-        android:inputType="number|numberDecimal" />
+        android:inputType="number|numberDecimal"
+        android:layout_columnSpan="3" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -62,7 +70,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:hint="@string/drillPerRevHint"
-        android:inputType="number|numberDecimal" />
+        android:inputType="number|numberDecimal"
+        android:layout_columnSpan="3" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -75,14 +84,16 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:hint="@string/drillFeedHint"
-        android:inputType="number|numberDecimal" />
+        android:inputType="number|numberDecimal"
+        android:layout_columnSpan="3" />
 
     <Button
         android:id="@+id/clearButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/clearButtonText" />
+        android:text="@string/clearButtonText"
+        android:layout_columnSpan="3" />
 
 
-</LinearLayout>
+</GridLayout>

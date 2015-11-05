@@ -14,4 +14,8 @@
     <string name="clearButtonText">Clear All</string>
     <string name="drillBreakThroughHint">Tip of Drill to First Land in Inches</string>
     <string name="drillBreakThroughLabel">Break Through (in.)</string>
+    <string name="millTitle">Milling</string>
+    <string name="millDiameter">Diameter</string>
+    <string name="millDiameterInfoText">Info</string>
+    <string name="millDiameterHint">Diameter of the Mill in inches</string>
 </resources>

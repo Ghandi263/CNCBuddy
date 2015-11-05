@@ -1,6 +1,34 @@
 <GridLayout
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:columnCount="3"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_columnSpan="3"
+        android:gravity="center_horizontal"
+        android:text="@string/millTitle"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    <Space
+        android:layout_height="25dp"
+        android:layout_columnSpan="3"/>
+
+    <TextView
+        android:text="@string/millDiameter"/>
+
+    <Button
+        android:id="@+id/millDiameterInfoButton"
+        android:text="@string/millDiameterInfoText"/>
+
+    <EditText
+        android:id="@+id/millDiameter"
+        android:layout_width="match_parent"
+        android:hint="@string/millDiameterHint"
+        android:inputType="number|numberDecimal"
+        android:layout_columnSpan="3"/>
+
+
+</GridLayout>
