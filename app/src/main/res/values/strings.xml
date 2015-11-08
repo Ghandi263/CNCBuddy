@@ -1,21 +1,19 @@
 <resources>
     <string name="app_name">CNC Buddy</string>
     <string name="drillTitleText">Drilling</string>
-    <string name="drillDiameterText">Diameter (in.)</string>
-    <string name="drillDiameterHint">Diameter of the Drill in Inches</string>
-    <string name="drillSurfaceFootageLabel">Surface Footage (SFM)</string>
-    <string name="drillSurfaceFootageHint">Rotational Speed of Cutting Edges in Surface Feet/Min</string>
-    <string name="drillRotationalSpeedLabel">Rotational Speed (RPM)</string>
-    <string name="drillRotationalSpeedHint">Number of Rotations the Drill Turns Each Minute</string>
-    <string name="drillPerRevLabel">Feed per Revolution (IPR)</string>
-    <string name="drillPerRevHint">Distance the Drill moves per Revolution</string>
-    <string name="drillFeedLabel">Feed (IPM)</string>
-    <string name="drillFeedHint">Distance the Drill Travels Per Minute</string>
+    <string name="diameterText">Diameter (in.)</string>
+    <string name="diameterHint">Diameter of the Cutter in Inches</string>
+    <string name="surfaceFootageLabel">Surface Footage (SFM)</string>
+    <string name="surfaceFootageHint">Rotational Speed in Surface Feet/Min</string>
+    <string name="rotationalSpeedLabel">Rotational Speed (RPM)</string>
+    <string name="rotationalSpeedHint">Number of Rotations Each Minute</string>
+    <string name="perRevLabel">Feed per Revolution (IPR)</string>
+    <string name="perRevHint">Depth of Cut per Revolution</string>
+    <string name="feedLabel">Feed (IPM)</string>
+    <string name="feedHint">Depth of Cut per Minute</string>
     <string name="clearButtonText">Clear All</string>
-    <string name="drillBreakThroughHint">Tip of Drill to First Land in Inches</string>
-    <string name="drillBreakThroughLabel">Break Through (in.)</string>
+    <string name="breakThroughHint">Tip of Drill to First Land in Inches</string>
+    <string name="breakThroughLabel">Break Through (in.)</string>
     <string name="millTitle">Milling</string>
-    <string name="millDiameter">Diameter</string>
-    <string name="millDiameterInfoText">Info</string>
-    <string name="millDiameterHint">Diameter of the Mill in inches</string>
+    <string name="infoButtonText">Info</string>
 </resources>

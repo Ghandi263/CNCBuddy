@@ -1,9 +1,8 @@
-<GridLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:columnCount="3">
+    android:columnCount="3"
+    android:orientation="horizontal">
 
     <TextView
         android:id="@+id/drillTitle"
@@ -14,86 +13,86 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Space
-        android:layout_columnSpan="3"
-        android:layout_height="20dp"/>
+        android:layout_height="20dp"
+        android:layout_columnSpan="3" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/drillDiameterText" />
+        android:text="@string/diameterText" />
 
 
     <EditText
         android:id="@+id/drillDiameter"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/drillDiameterHint"
-        android:inputType="number|numberDecimal"
-        android:layout_columnSpan="3"/>
+        android:layout_columnSpan="3"
+        android:hint="@string/diameterHint"
+        android:inputType="number|numberDecimal" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="20dp"
-        android:text="@string/drillSurfaceFootageLabel" />
+        android:text="@string/surfaceFootageLabel" />
 
     <EditText
         android:id="@+id/drillSurfaceFootage"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/drillSurfaceFootageHint"
-        android:inputType="number|numberDecimal"
-        android:layout_columnSpan="3" />
+        android:layout_columnSpan="3"
+        android:hint="@string/surfaceFootageHint"
+        android:inputType="number|numberDecimal" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="20dp"
-        android:text="@string/drillRotationalSpeedLabel" />
+        android:text="@string/rotationalSpeedLabel" />
 
     <EditText
         android:id="@+id/drillRotationalSpeed"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/drillRotationalSpeedHint"
-        android:inputType="number|numberDecimal"
-        android:layout_columnSpan="3" />
+        android:layout_columnSpan="3"
+        android:hint="@string/rotationalSpeedHint"
+        android:inputType="number|numberDecimal" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="20dp"
-        android:text="@string/drillPerRevLabel" />
+        android:text="@string/perRevLabel" />
 
     <EditText
         android:id="@+id/drillPerRev"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/drillPerRevHint"
-        android:inputType="number|numberDecimal"
-        android:layout_columnSpan="3" />
+        android:layout_columnSpan="3"
+        android:hint="@string/perRevHint"
+        android:inputType="number|numberDecimal" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="20dp"
-        android:text="@string/drillFeedLabel" />
+        android:text="@string/feedLabel" />
 
     <EditText
         android:id="@+id/drillFeed"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/drillFeedHint"
-        android:inputType="number|numberDecimal"
-        android:layout_columnSpan="3" />
+        android:layout_columnSpan="3"
+        android:hint="@string/feedHint"
+        android:inputType="number|numberDecimal" />
 
     <Button
         android:id="@+id/clearButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_columnSpan="3"
         android:gravity="center"
-        android:text="@string/clearButtonText"
-        android:layout_columnSpan="3" />
+        android:text="@string/clearButtonText" />
 
 
 </GridLayout>
