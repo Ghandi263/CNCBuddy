@@ -16,4 +16,10 @@
     <string name="breakThroughLabel">Break Through (in.)</string>
     <string name="millTitle">Milling</string>
     <string name="infoButtonText">Info</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="drillActivityBtnText">Drilling Calculator</string>
+    <string name="millActivityBtnText">Mill Calculator</string>
+    <string name="perToothHing">Depth of Cut per Cutting Edge</string>
+    <string name="perToothLabel">Feed per Tooth (IPT)</string>
+    <string name="cuttingEdges">Number of Cutting Edges</string>
 </resources>

@@ -5,6 +5,7 @@
     android:orientation="horizontal">
 
     <TextView
+        android:id="@+id/drillTitle"
         android:layout_width="match_parent"
         android:layout_columnSpan="3"
         android:gravity="center_horizontal"
@@ -12,17 +13,100 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Space
-        android:layout_height="25dp"
+        android:layout_height="20dp"
         android:layout_columnSpan="3" />
 
-    <TextView android:text="@string/diameterText" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/diameterText" />
+
 
     <EditText
         android:id="@+id/millDiameter"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         android:layout_columnSpan="3"
         android:hint="@string/diameterHint"
         android:inputType="number|numberDecimal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:text="@string/surfaceFootageLabel" />
+
+    <EditText
+        android:id="@+id/millSurfaceFootage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="3"
+        android:hint="@string/surfaceFootageHint"
+        android:inputType="number|numberDecimal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:text="@string/rotationalSpeedLabel" />
+
+    <EditText
+        android:id="@+id/millRotationalSpeed"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="3"
+        android:hint="@string/rotationalSpeedHint"
+        android:inputType="number|numberDecimal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:text="@string/perToothLabel" />
+
+    <EditText
+        android:id="@+id/millPerTooth"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="3"
+        android:hint="@string/perToothHing"
+        android:inputType="number|numberDecimal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:text="@string/cuttingEdges" />
+
+    <EditText
+        android:id="@+id/millTeeth"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="3"
+        android:hint="@string/feedHint"
+        android:inputType="number|numberDecimal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:text="@string/feedLabel" />
+
+    <EditText
+        android:id="@+id/millFeed"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="3"
+        android:hint="@string/feedHint"
+        android:inputType="number|numberDecimal" />
+
+    <Button
+        android:id="@+id/millClearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="3"
+        android:gravity="center"
+        android:text="@string/clearButtonText" />
 
 
 </GridLayout>

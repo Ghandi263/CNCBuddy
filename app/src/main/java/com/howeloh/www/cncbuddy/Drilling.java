@@ -18,7 +18,7 @@ public class Drilling extends AppCompatActivity {
         final EditText drillRPM = (EditText) findViewById(R.id.drillRotationalSpeed);
         final EditText drillIPR = (EditText) findViewById(R.id.drillPerRev);
         final EditText drillIPM = (EditText) findViewById(R.id.drillFeed);
-        final Button clearButton = (Button) findViewById(R.id.clearButton);
+        final Button clearButton = (Button) findViewById(R.id.drillClearButton);
 
         final Calculator calculator = new Calculator();
 
