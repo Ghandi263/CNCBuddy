@@ -1,98 +1,104 @@
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:columnCount="3"
-    android:orientation="horizontal">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/drillTitle"
+    <GridLayout
         android:layout_width="match_parent"
-        android:layout_columnSpan="3"
-        android:gravity="center_horizontal"
-        android:text="@string/drillTitleText"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:layout_height="match_parent"
+        android:columnCount="3"
+        android:orientation="horizontal">
 
-    <Space
-        android:layout_height="20dp"
-        android:layout_columnSpan="3" />
+        <TextView
+            android:id="@+id/drillTitle"
+            android:layout_width="match_parent"
+            android:layout_columnSpan="3"
+            android:gravity="center_horizontal"
+            android:text="@string/drillTitleText"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/diameterText" />
+        <Space
+            android:layout_height="20dp"
+            android:layout_columnSpan="3" />
 
-
-    <EditText
-        android:id="@+id/drillDiameter"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_columnSpan="3"
-        android:hint="@string/diameterHint"
-        android:inputType="number|numberDecimal" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="20dp"
-        android:text="@string/surfaceFootageLabel" />
-
-    <EditText
-        android:id="@+id/drillSurfaceFootage"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_columnSpan="3"
-        android:hint="@string/surfaceFootageHint"
-        android:inputType="number|numberDecimal" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="20dp"
-        android:text="@string/rotationalSpeedLabel" />
-
-    <EditText
-        android:id="@+id/drillRotationalSpeed"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_columnSpan="3"
-        android:hint="@string/rotationalSpeedHint"
-        android:inputType="number|numberDecimal" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="20dp"
-        android:text="@string/perRevLabel" />
-
-    <EditText
-        android:id="@+id/drillPerRev"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_columnSpan="3"
-        android:hint="@string/perRevHint"
-        android:inputType="number|numberDecimal" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="20dp"
-        android:text="@string/feedLabel" />
-
-    <EditText
-        android:id="@+id/drillFeed"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_columnSpan="3"
-        android:hint="@string/feedHint"
-        android:inputType="number|numberDecimal" />
-
-    <Button
-        android:id="@+id/drillClearButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_columnSpan="3"
-        android:gravity="center"
-        android:text="@string/clearButtonText" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/diameterText" />
 
 
-</GridLayout>
+        <EditText
+            android:id="@+id/drillDiameter"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="3"
+            android:hint="@string/diameterHint"
+            android:inputType="number|numberDecimal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:text="@string/surfaceFootageLabel" />
+
+        <EditText
+            android:id="@+id/drillSurfaceFootage"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="3"
+            android:hint="@string/surfaceFootageHint"
+            android:inputType="number|numberDecimal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:text="@string/rotationalSpeedLabel" />
+
+        <EditText
+            android:id="@+id/drillRotationalSpeed"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="3"
+            android:hint="@string/rotationalSpeedHint"
+            android:inputType="number|numberDecimal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:text="@string/perRevLabel" />
+
+        <EditText
+            android:id="@+id/drillPerRev"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="3"
+            android:hint="@string/perRevHint"
+            android:inputType="number|numberDecimal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:text="@string/feedLabel" />
+
+        <EditText
+            android:id="@+id/drillFeed"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="3"
+            android:hint="@string/feedHint"
+            android:inputType="number|numberDecimal" />
+
+        <Button
+            android:id="@+id/drillClearButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="3"
+            android:gravity="center"
+            android:text="@string/clearButtonText" />
+
+
+    </GridLayout>
+</ScrollView>

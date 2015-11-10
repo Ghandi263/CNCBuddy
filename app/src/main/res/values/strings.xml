@@ -19,7 +19,8 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="drillActivityBtnText">Drilling Calculator</string>
     <string name="millActivityBtnText">Mill Calculator</string>
-    <string name="perToothHing">Depth of Cut per Cutting Edge</string>
+    <string name="perToothHint">Depth of Cut per Cutting Edge</string>
     <string name="perToothLabel">Feed per Tooth (IPT)</string>
-    <string name="cuttingEdges">Number of Cutting Edges</string>
+    <string name="millTeethLabel">Number of Cutting Edges</string>
+    <string name="millTeethHint">Number of Flutes on the Cutter</string>
 </resources>

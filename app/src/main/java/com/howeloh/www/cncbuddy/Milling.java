@@ -17,7 +17,7 @@ public class Milling extends AppCompatActivity {
         final EditText millSFM = (EditText) findViewById(R.id.millSurfaceFootage);
         final EditText millRPM = (EditText) findViewById(R.id.millRotationalSpeed);
         final EditText millIPT = (EditText) findViewById(R.id.millPerTooth);
-        final EditText millCut = (EditText) findViewById(R.id.millTeeth);
+        final EditText millTeeth = (EditText) findViewById(R.id.millTeeth);
         final EditText millFeed = (EditText) findViewById(R.id.millFeed);
         Button clearBtn = (Button) findViewById(R.id.millClearButton);
 
@@ -27,22 +27,22 @@ public class Milling extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 if (v.getId() == R.id.millDiameter && !hasFocus) {
-                    calculator.diaLostFocus(millDia, millSFM, millRPM, millIPT, millFeed, millCut);
+                    calculator.diaLostFocus(millDia, millSFM, millRPM, millIPT, millFeed, millTeeth);
 
                 } else if (v.getId() == R.id.millSurfaceFootage && !hasFocus) {
-                    calculator.SFMLostFocus(millDia, millSFM, millRPM, millIPT, millFeed, millCut);
+                    calculator.SFMLostFocus(millDia, millSFM, millRPM, millIPT, millFeed, millTeeth);
 
                 } else if (v.getId() == R.id.millRotationalSpeed && !hasFocus) {
-                    calculator.RPMLostFocus(millDia, millSFM, millRPM, millIPT, millFeed, millCut);
+                    calculator.RPMLostFocus(millDia, millSFM, millRPM, millIPT, millFeed, millTeeth);
 
                 } else if (v.getId() == R.id.millPerTooth && !hasFocus) {
-                    calculator.IPRLostFocus(millDia, millSFM, millRPM, millIPT, millFeed, millCut);
+                    calculator.IPRLostFocus(millDia, millSFM, millRPM, millIPT, millFeed, millTeeth);
 
                 } else if (v.getId() == R.id.millFeed && !hasFocus) {
-                    calculator.IPMLostFocus(millDia, millSFM, millRPM, millIPT, millFeed, millCut);
+                    calculator.IPMLostFocus(millDia, millSFM, millRPM, millIPT, millFeed, millTeeth);
 
                 } else if (v.getId() == R.id.millTeeth && !hasFocus) {
-                    calculator.teethLostFocus(millDia, millSFM, millRPM, millIPT, millFeed, millCut);
+                    calculator.teethLostFocus(millDia, millSFM, millRPM, millIPT, millFeed, millTeeth);
                 }
             }
         };
@@ -52,7 +52,7 @@ public class Milling extends AppCompatActivity {
         millRPM.setOnFocusChangeListener(bigFocusChangeListener);
         millIPT.setOnFocusChangeListener(bigFocusChangeListener);
         millFeed.setOnFocusChangeListener(bigFocusChangeListener);
-        millIPT.setOnFocusChangeListener(bigFocusChangeListener);
+        millTeeth.setOnFocusChangeListener(bigFocusChangeListener);
 
         clearBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,7 +61,7 @@ public class Milling extends AppCompatActivity {
                 millSFM.setText("");
                 millRPM.setText("");
                 millIPT.setText("");
-                millCut.setText("");
+                millTeeth.setText("");
                 millFeed.setText("");
             }
         });
