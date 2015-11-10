@@ -1,5 +1,6 @@
 package com.howeloh.www.cncbuddy;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -18,7 +19,8 @@ public class Drilling extends AppCompatActivity {
         final EditText drillRPM = (EditText) findViewById(R.id.drillRotationalSpeed);
         final EditText drillIPR = (EditText) findViewById(R.id.drillPerRev);
         final EditText drillIPM = (EditText) findViewById(R.id.drillFeed);
-        final Button clearButton = (Button) findViewById(R.id.drillClearButton);
+        Button clearButton = (Button) findViewById(R.id.drillClearButton);
+        Button toMillingBtn = (Button) findViewById(R.id.toMillingButton);
 
         final Calculator calculator = new Calculator();
 
@@ -49,6 +51,14 @@ public class Drilling extends AppCompatActivity {
         drillRPM.setOnFocusChangeListener(bigFocusChangeListener);
         drillIPR.setOnFocusChangeListener(bigFocusChangeListener);
         drillIPM.setOnFocusChangeListener(bigFocusChangeListener);
+
+        toMillingBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Drilling.this, Milling.class));
+                finish();
+            }
+        });
 
         clearButton.setOnClickListener(new View.OnClickListener() {
             @Override

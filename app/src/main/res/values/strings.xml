@@ -23,4 +23,6 @@
     <string name="perToothLabel">Feed per Tooth (IPT)</string>
     <string name="millTeethLabel">Number of Cutting Edges</string>
     <string name="millTeethHint">Number of Flutes on the Cutter</string>
+    <string name="toMillingButtonText">To Milling</string>
+    <string name="toDrillingButtonText">To Drilling</string>
 </resources>

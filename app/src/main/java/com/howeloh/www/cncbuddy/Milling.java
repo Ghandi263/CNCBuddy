@@ -1,5 +1,6 @@
 package com.howeloh.www.cncbuddy;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,6 +21,7 @@ public class Milling extends AppCompatActivity {
         final EditText millTeeth = (EditText) findViewById(R.id.millTeeth);
         final EditText millFeed = (EditText) findViewById(R.id.millFeed);
         Button clearBtn = (Button) findViewById(R.id.millClearButton);
+        Button toDrillingBtn = (Button) findViewById(R.id.toDrillingButton);
 
         final Calculator calculator = new Calculator();
 
@@ -53,6 +55,14 @@ public class Milling extends AppCompatActivity {
         millIPT.setOnFocusChangeListener(bigFocusChangeListener);
         millFeed.setOnFocusChangeListener(bigFocusChangeListener);
         millTeeth.setOnFocusChangeListener(bigFocusChangeListener);
+
+        toDrillingBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Milling.this, Drilling.class));
+                finish();
+            }
+        });
 
         clearBtn.setOnClickListener(new View.OnClickListener() {
             @Override
