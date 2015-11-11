@@ -2,7 +2,7 @@
     <string name="app_name">CNC Buddy</string>
     <string name="drillTitleText">Drilling</string>
     <string name="diameterText">Diameter (in.)</string>
-    <string name="diameterHint">Diameter of the Cutter in Inches</string>
+    <string name="diameterHint">Cutter Diameter</string>
     <string name="surfaceFootageLabel">Surface Footage (SFM)</string>
     <string name="surfaceFootageHint">Rotational Speed in Surface Feet/Min</string>
     <string name="rotationalSpeedLabel">Rotational Speed (RPM)</string>

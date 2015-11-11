@@ -28,15 +28,26 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_columnSpan="3"
             android:text="@string/diameterText" />
-
 
         <EditText
             android:id="@+id/drillDiameter"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_columnSpan="3"
             android:hint="@string/diameterHint"
+            android:inputType="number|numberDecimal" />
+
+        <EditText
+            android:id="@+id/drillTipAngle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number|numberDecimal" />
+
+        <EditText
+            android:id="@+id/drillTipDepth"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
             android:inputType="number|numberDecimal" />
 
         <TextView
