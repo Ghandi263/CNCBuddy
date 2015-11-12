@@ -25,4 +25,8 @@
     <string name="millTeethHint">Number of Flutes on the Cutter</string>
     <string name="toMillingButtonText">To Milling</string>
     <string name="toDrillingButtonText">To Drilling</string>
+    <string name="drillTipAngleHint">Deg</string>
+    <string name="drillTipDepthHint">Breakthrough</string>
+    <string name="drillTipAngleText">Tip Angle</string>
+    <string name="drillTipDepthText">Tip Depth</string>
 </resources>

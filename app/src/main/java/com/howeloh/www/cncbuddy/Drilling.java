@@ -19,6 +19,8 @@ public class Drilling extends AppCompatActivity {
         final EditText drillRPM = (EditText) findViewById(R.id.drillRotationalSpeed);
         final EditText drillIPR = (EditText) findViewById(R.id.drillPerRev);
         final EditText drillIPM = (EditText) findViewById(R.id.drillFeed);
+        final EditText drillAngle = (EditText) findViewById(R.id.drillTipAngle);
+        final EditText drillDepth = (EditText) findViewById(R.id.drillTipDepth);
         Button clearButton = (Button) findViewById(R.id.drillClearButton);
         Button toMillingBtn = (Button) findViewById(R.id.toMillingButton);
 
@@ -28,19 +30,25 @@ public class Drilling extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 if (v.getId() == R.id.drillDiameter && !hasFocus) {
-                    calculator.diaLostFocus(drillDia, drillSFM, drillRPM, drillIPR, drillIPM);
+                    calculator.diaLostFocus(drillDia, drillSFM, drillRPM, drillIPR, drillIPM, drillAngle, drillDepth);
 
                 } else if (v.getId() == R.id.drillSurfaceFootage && !hasFocus) {
-                    calculator.SFMLostFocus(drillDia, drillSFM, drillRPM, drillIPR, drillIPM);
+                    calculator.SFMLostFocus(drillDia, drillSFM, drillRPM, drillIPR, drillIPM, drillAngle, drillDepth);
 
                 } else if (v.getId() == R.id.drillRotationalSpeed && !hasFocus) {
-                    calculator.RPMLostFocus(drillDia, drillSFM, drillRPM, drillIPR, drillIPM);
+                    calculator.RPMLostFocus(drillDia, drillSFM, drillRPM, drillIPR, drillIPM, drillAngle, drillDepth);
 
                 } else if (v.getId() == R.id.drillPerRev && !hasFocus) {
-                    calculator.IPRLostFocus(drillDia, drillSFM, drillRPM, drillIPR, drillIPM);
+                    calculator.IPRLostFocus(drillDia, drillSFM, drillRPM, drillIPR, drillIPM, drillAngle, drillDepth);
 
                 } else if (v.getId() == R.id.drillFeed && !hasFocus) {
-                    calculator.IPMLostFocus(drillDia, drillSFM, drillRPM, drillIPR, drillIPM);
+                    calculator.IPMLostFocus(drillDia, drillSFM, drillRPM, drillIPR, drillIPM, drillAngle, drillDepth);
+
+                } else if (v.getId() == R.id.drillTipAngle && !hasFocus) {
+                    calculator.angleLostFocus(drillDia, drillSFM, drillRPM, drillIPR, drillIPM, drillAngle, drillDepth);
+
+                } else if (v.getId() == R.id.drillTipDepth && !hasFocus) {
+                    calculator.depthLostFocus(drillDia, drillSFM, drillRPM, drillIPR, drillIPM, drillAngle, drillDepth);
 
                 }
             }

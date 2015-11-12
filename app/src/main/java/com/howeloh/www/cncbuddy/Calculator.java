@@ -2,8 +2,9 @@ package com.howeloh.www.cncbuddy;
 
 import android.widget.EditText;
 
-/** *This Class is used to create reusability across each of the primary calculator activities
- *  *Created by Eric on 10/27/2015.
+/**
+ * This Class is used to create reusability across each of the primary calculator activities
+ * *Created by Eric on 10/27/2015.
  */
 
 
@@ -52,8 +53,20 @@ public class Calculator {
         return String.format("%.4f", (Double.valueOf(IPM.getText().toString()) / Double.valueOf(IPR.getText().toString())) / Double.valueOf(RPM.getText().toString()));
     }
 
+    private String calculateDepth_w_Dia_Angle(EditText Dia, EditText Angle) {
+        return String.format("%.4f", (Double.valueOf(Dia.getText().toString()) / 2) / (Math.tan(Double.valueOf(Angle.getText().toString()) / 2)));
+    }
 
-    protected void diaLostFocus(EditText Dia, EditText SFM, EditText RPM, EditText IPR, EditText IPM) {
+    private String calculateAngle_w_Dia_Depth(EditText Dia, EditText Depth) {
+        return String.format("%.4f", 2 * (1 / Math.tan((Double.valueOf(Dia.getText().toString()) / 2) / Double.valueOf(Depth.getText().toString()))));
+    }
+
+    private String calculateDia_w_Depth_Angle(EditText Depth, EditText Angle) {
+        return String.format("%.4f", 2 * Math.tan(Double.valueOf(Angle.getText().toString()) / 2) * Double.valueOf(Depth.getText().toString()));
+    }
+
+
+    protected void diaLostFocus(EditText Dia, EditText SFM, EditText RPM, EditText IPR, EditText IPM, EditText Angle, EditText Depth) {
 
         if (!Dia.getText().toString().equals("") && !SFM.getText().toString().equals("")) {
             RPM.setText(calculateRPM_w_Dia_SFM(Dia, SFM));
@@ -67,6 +80,20 @@ public class Calculator {
             }
         } else if (!Dia.getText().toString().equals("") && !RPM.getText().toString().equals("")) {
             SFM.setText(calculateSFM_w_Dia_RPM(Dia, RPM));
+
+        } else if (!SFM.getText().toString().equals("") && !RPM.getText().toString().equals("")) {
+            Dia.setText(calculateDia_w_SFM_RPM(SFM, RPM));
+
+        }
+
+        if (!Dia.getText().toString().equals("") && !Angle.getText().toString().equals("")) {
+            Depth.setText(calculateDepth_w_Dia_Angle(Dia, Angle));
+
+        } else if (!Dia.getText().toString().equals("") && !Depth.getText().toString().equals("")) {
+            Angle.setText(calculateAngle_w_Dia_Depth(Dia, Depth));
+
+        } else if (!Angle.getText().toString().equals("") && !Depth.getText().toString().equals("")) {
+            Dia.setText(calculateDia_w_Depth_Angle(Depth, Angle));
 
         }
 
@@ -93,7 +120,7 @@ public class Calculator {
     }
 
 
-    protected void SFMLostFocus(EditText Dia, EditText SFM, EditText RPM, EditText IPR, EditText IPM) {
+    protected void SFMLostFocus(EditText Dia, EditText SFM, EditText RPM, EditText IPR, EditText IPM, EditText Angle, EditText Depth) {
         if (!Dia.getText().toString().equals("") && !SFM.getText().toString().equals("")) {
             RPM.setText(calculateRPM_w_Dia_SFM(Dia, SFM));
 
@@ -107,6 +134,13 @@ public class Calculator {
         } else if (!SFM.getText().toString().equals("") && !RPM.getText().toString().equals("")) {
             Dia.setText(calculateDia_w_SFM_RPM(SFM, RPM));
 
+            if (!Angle.getText().toString().equals("")) {
+                Depth.setText(calculateDepth_w_Dia_Angle(Dia, Angle));
+
+            } else if (!Depth.getText().toString().equals("")) {
+                Angle.setText(calculateAngle_w_Dia_Depth(Dia, Depth));
+
+            }
         }
     }
 
@@ -131,7 +165,7 @@ public class Calculator {
     }
 
 
-    protected void RPMLostFocus(EditText Dia, EditText SFM, EditText RPM, EditText IPR, EditText IPM) {
+    protected void RPMLostFocus(EditText Dia, EditText SFM, EditText RPM, EditText IPR, EditText IPM, EditText Angle, EditText Depth) {
         if (!IPR.getText().toString().equals("") && !RPM.getText().toString().equals("")) {
             IPM.setText(calculateIPM_w_RPM_IPR(RPM, IPR));
 
@@ -146,6 +180,13 @@ public class Calculator {
         } else if (!SFM.getText().toString().equals("") && !RPM.getText().toString().equals("")) {
             Dia.setText(calculateDia_w_SFM_RPM(SFM, RPM));
 
+            if (!Angle.getText().toString().equals("")) {
+                Depth.setText(calculateDepth_w_Dia_Angle(Dia, Angle));
+
+            } else if (!Depth.getText().toString().equals("")) {
+                Angle.setText(calculateAngle_w_Dia_Depth(Dia, Depth));
+
+            }
         }
     }
 
@@ -171,7 +212,7 @@ public class Calculator {
     }
 
 
-    protected void IPRLostFocus(EditText Dia, EditText SFM, EditText RPM, EditText IPR, EditText IPM) {
+    protected void IPRLostFocus(EditText Dia, EditText SFM, EditText RPM, EditText IPR, EditText IPM, EditText Angle, EditText Depth) {
         if (!RPM.getText().toString().equals("") && !IPR.getText().toString().equals("")) {
             IPM.setText(calculateIPM_w_RPM_IPR(RPM, IPR));
 
@@ -184,6 +225,13 @@ public class Calculator {
             } else if (!SFM.getText().toString().equals("")) {
                 Dia.setText(calculateDia_w_SFM_RPM(SFM, RPM));
 
+                if (!Angle.getText().toString().equals("")) {
+                    Depth.setText(calculateDepth_w_Dia_Angle(Dia, Angle));
+
+                } else if (!Depth.getText().toString().equals("")) {
+                    Angle.setText(calculateAngle_w_Dia_Depth(Dia, Depth));
+
+                }
             }
         }
     }
@@ -209,7 +257,7 @@ public class Calculator {
     }
 
 
-    protected void IPMLostFocus(EditText Dia, EditText SFM, EditText RPM, EditText IPR, EditText IPM) {
+    protected void IPMLostFocus(EditText Dia, EditText SFM, EditText RPM, EditText IPR, EditText IPM, EditText Angle, EditText Depth) {
         if (!RPM.getText().toString().equals("") && !IPM.getText().toString().equals("")) {
             IPR.setText(calculateIPR_w_RPM_IPM(RPM, IPM));
 
@@ -222,6 +270,13 @@ public class Calculator {
             } else if (!SFM.getText().toString().equals("")) {
                 Dia.setText(calculateDia_w_SFM_RPM(SFM, RPM));
 
+                if (!Angle.getText().toString().equals("")) {
+                    Depth.setText(calculateDepth_w_Dia_Angle(Dia, Angle));
+
+                } else if (!Depth.getText().toString().equals("")) {
+                    Angle.setText(calculateAngle_w_Dia_Depth(Dia, Depth));
+
+                }
             }
         }
     }
@@ -269,4 +324,59 @@ public class Calculator {
         }
     }
 
+    protected void angleLostFocus (EditText Dia, EditText SFM, EditText RPM, EditText IPR, EditText IPM, EditText Angle, EditText Depth) {
+        if (!Dia.getText().toString().equals("") && !Angle.getText().toString().equals("")) {
+            Depth.setText(calculateDepth_w_Dia_Angle(Dia, Angle));
+
+        } else if (!Angle.getText().toString().equals("") && !Depth.getText().toString().equals("")) {
+            Dia.setText(calculateDia_w_Depth_Angle(Depth, Angle));
+
+            if (!SFM.getText().toString().equals("")) {
+                RPM.setText(calculateRPM_w_Dia_SFM(Dia, SFM));
+
+                if (!IPR.getText().toString().equals("")) {
+                    IPM.setText(calculateIPM_w_RPM_IPR(RPM, IPR));
+
+                } else if (!IPM.getText().toString().equals("")) {
+                    IPR.setText(calculateIPR_w_RPM_IPM(RPM, IPM));
+
+                }
+            } else if (!RPM.getText().toString().equals("")) {
+                SFM.setText(calculateSFM_w_Dia_RPM(Dia, RPM));
+
+            }
+
+        } else if (!Dia.getText().toString().equals("") && !Depth.getText().toString().equals("")) {
+            Angle.setText(calculateAngle_w_Dia_Depth(Dia, Depth));
+
+        }
+    }
+
+    protected void depthLostFocus (EditText Dia, EditText SFM, EditText RPM, EditText IPR, EditText IPM, EditText Angle, EditText Depth) {
+        if (!Angle.getText().toString().equals("") && !Depth.getText().toString().equals("")) {
+            Dia.setText(calculateDia_w_Depth_Angle(Depth, Angle));
+
+            if (!SFM.getText().toString().equals("")) {
+                RPM.setText(calculateRPM_w_Dia_SFM(Dia, SFM));
+
+                if (!IPR.getText().toString().equals("")) {
+                    IPM.setText(calculateIPM_w_RPM_IPR(RPM, IPR));
+
+                } else if (!IPM.getText().toString().equals("")) {
+                    IPR.setText(calculateIPR_w_RPM_IPM(RPM, IPM));
+
+                }
+            } else if (!RPM.getText().toString().equals("")) {
+                SFM.setText(calculateSFM_w_Dia_RPM(Dia, RPM));
+
+            }
+
+        } else if (!Dia.getText().toString().equals("") && !Depth.getText().toString().equals("")) {
+            Angle.setText(calculateAngle_w_Dia_Depth(Dia, Depth));
+
+        }  else if (!Dia.getText().toString().equals("") && !Angle.getText().toString().equals("")) {
+            Depth.setText(calculateDepth_w_Dia_Angle(Dia, Angle));
+
+        }
+    }
 }

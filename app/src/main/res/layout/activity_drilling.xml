@@ -28,26 +28,34 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_columnSpan="3"
             android:text="@string/diameterText" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/drillTipAngleText" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="@string/drillTipDepthText" />
 
         <EditText
             android:id="@+id/drillDiameter"
-            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:hint="@string/diameterHint"
             android:inputType="number|numberDecimal" />
 
         <EditText
             android:id="@+id/drillTipAngle"
-            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:hint="@string/drillTipAngleHint"
             android:inputType="number|numberDecimal" />
 
         <EditText
             android:id="@+id/drillTipDepth"
-            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:hint="@string/drillTipDepthHint"
             android:inputType="number|numberDecimal" />
 
         <TextView
@@ -58,7 +66,6 @@
 
         <EditText
             android:id="@+id/drillSurfaceFootage"
-            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_columnSpan="3"
             android:hint="@string/surfaceFootageHint"
@@ -72,7 +79,6 @@
 
         <EditText
             android:id="@+id/drillRotationalSpeed"
-            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_columnSpan="3"
             android:hint="@string/rotationalSpeedHint"
@@ -86,7 +92,6 @@
 
         <EditText
             android:id="@+id/drillPerRev"
-            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_columnSpan="3"
             android:hint="@string/perRevHint"
@@ -100,7 +105,6 @@
 
         <EditText
             android:id="@+id/drillFeed"
-            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_columnSpan="3"
             android:hint="@string/feedHint"
@@ -113,7 +117,6 @@
             android:layout_columnSpan="3"
             android:gravity="center"
             android:text="@string/clearButtonText" />
-
 
     </GridLayout>
 </ScrollView>
