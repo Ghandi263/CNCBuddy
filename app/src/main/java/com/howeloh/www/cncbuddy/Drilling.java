@@ -59,6 +59,8 @@ public class Drilling extends AppCompatActivity {
         drillRPM.setOnFocusChangeListener(bigFocusChangeListener);
         drillIPR.setOnFocusChangeListener(bigFocusChangeListener);
         drillIPM.setOnFocusChangeListener(bigFocusChangeListener);
+        drillAngle.setOnFocusChangeListener(bigFocusChangeListener);
+        drillDepth.setOnFocusChangeListener(bigFocusChangeListener);
 
         toMillingBtn.setOnClickListener(new View.OnClickListener() {
             @Override
